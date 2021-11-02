@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="Opencart Regression suite" parallel="tests" thread-count="2">
+
+	<!-- These Listeners will be applicable for all tests inside this xml file -->
+	<listeners>
+		<listener class-name="com.qa.listeners.TestListener" />
+	</listeners>
+
+	<test name="Login Tests">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.tests.A_LoginPageTest" />
+		</classes>
+	</test>
+
+	<test name="AccountsPage Tests">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.qa.tests.B_AccountsPageTest" />
+		</classes>
+	</test>
+
+	<test name="Product Info Tests">
+	<parameter name="browser" value="firefox" />
+		<classes>
+			<!-- <class name="com.qa.tests.C_ProductsInfoTest" /> -->
+		</classes>
+	</test>
+
+</suite>
